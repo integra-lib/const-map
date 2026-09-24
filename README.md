@@ -2,23 +2,23 @@
 
 Compile-time key-value table with a linear lookup; a missing key is std::nullopt, not an exception.
 
-Part of [integra-lib](https://github.com/integra-lib) — architecture-independent C++20
+Part of [hwlib](https://github.com/integra-lib) — architecture-independent C++20
 components shared between firmware projects. Header-only,
 no exceptions, no RTTI.
 
 ## Use it
 
 ```bash
-git submodule add git@github.com:integra-lib/const-map.git external/integra/const-map
+git submodule add git@github.com:integra-lib/const-map.git external/hwlib/const-map
 ```
 
 ```cmake
-add_subdirectory(external/integra/const-map)
-target_link_libraries(app PRIVATE Integra::const_map)
+add_subdirectory(external/hwlib/const-map)
+target_link_libraries(app PRIVATE Hwlib::const_map)
 ```
 
 ```cpp
-#include <integra/const_map.hpp>
+#include <hwlib/data_structures/const_map.hpp>
 ```
 
 Each component carries its own include directory, so this header stays unreachable
@@ -31,9 +31,9 @@ Every component is released on its own, tagged `vX.Y.Z`. Pre-1.0, a minor releas
 break the API, which is why dependants accept a single minor.
 
 ```bash
-git -C external/integra/const-map fetch --tags
-git -C external/integra/const-map checkout v0.2.0
-git add external/integra/const-map && git commit -m "build: bump const-map to v0.2.0"
+git -C external/hwlib/const-map fetch --tags
+git -C external/hwlib/const-map checkout v0.2.0
+git add external/hwlib/const-map && git commit -m "build: bump const-map to v0.2.0"
 ```
 
 ## In a consumer's CI

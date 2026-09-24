@@ -2,7 +2,7 @@
 
 #include <array>
 #include <cstdint>
-#include <integra/const_map.hpp>
+#include <hwlib/data_structures/const_map.hpp>
 #include <string_view>
 #include <utility>
 
@@ -17,7 +17,7 @@ enum class Code : std::uint8_t
     eUnknown = 3U,
 };
 
-constexpr integra::ConstMap<Code, std::string_view, 3> NAMES{{{
+constexpr hwlib::data_structures::ConstMap<Code, std::string_view, 3> NAMES{{{
     {Code::eOk, "ok"},
     {Code::eTimeout, "timeout"},
     {Code::eCrc, "crc"},

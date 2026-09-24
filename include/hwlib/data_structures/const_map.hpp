@@ -5,7 +5,7 @@
 #include <optional>
 #include <utility>
 
-namespace integra
+namespace hwlib::data_structures
 {
 
 /// @brief Compile-time key-value table
@@ -33,4 +33,4 @@ struct ConstMap
 template<typename Key, typename Value, std::size_t SIZE>
 ConstMap(std::array<std::pair<Key, Value>, SIZE>) -> ConstMap<Key, Value, SIZE>;
 
-} // namespace integra
+} // namespace hwlib::data_structures
